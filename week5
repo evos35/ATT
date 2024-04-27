@@ -1,0 +1,32 @@
+package week5;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class week5 {
+
+	public static void main(String[] args) throws InterruptedException{
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\student\\Desktop\\Selenium lab\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		WebDriver dr = new ChromeDriver();
+		dr.manage().window().maximize();
+		dr.get("https://dhondi.cmrithyderabad.edu.in/");
+		WebElement mb =dr.findElement(By.name("mobile"));
+		mb.sendKeys("9346050738");
+	    dr.findElement(By.className("formButton")).click();
+			Thread.sleep(3000); 
+		WebElement k1 =dr.findElement(By.name("first"));
+		k1.sendKeys("2");
+		WebElement k2 =dr.findElement(By.name("second"));
+		k2.sendKeys("4");
+		WebElement k3 =dr.findElement(By.name("third"));
+        k3.sendKeys("5");
+		WebElement k4 =dr.findElement(By.name("fourth"));
+		k4.sendKeys("2");
+		dr.findElement(By.name("formbutton marginTop10")).click();
+		
+	}
+}
