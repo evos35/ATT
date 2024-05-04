@@ -1,0 +1,24 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver; 
+public class week9 {
+
+	public static void main(String[] args) {
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.justdial.com/Mumbai/Bakeries/nct-10033880?trkid=13616-mumbai");
+		List<WebElement> m=driver.findElements(By.xpath("//h2[@class='jsx-b7e5c19c50ebbe3c resultbox_title font22 fw500 color111 complist_title']"));
+		{
+			  for(int i=0;i<m.size();i++) {
+		        	
+			String s=m.get(i).getText();
+			System.out.println("B Name :"+s);
+			
+		}
+	}
+
+}
+}
