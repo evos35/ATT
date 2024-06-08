@@ -1,8 +1,4 @@
 package nithesh;
-
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,7 +40,7 @@ public class week10 {
 		next.click();
 		Thread.sleep(1000);
 		WebElement un=driver.findElement(By.name("Username"));
-		un.sendKeys("af641022");
+		un.sendKeys("af641022aw");
 		WebElement niext=driver.findElement(By.xpath("//span[normalize-space()='Next']"));
 		niext.click();
 		Thread.sleep(1000);
