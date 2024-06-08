@@ -1,0 +1,70 @@
+package nithesh;
+
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class week10 {
+
+	public static void main(String[] args)throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chromedriver","C:\\Users\\student\\Desktop\\Selenium Lab\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://gmail.com");
+		Thread.sleep(3000);
+		WebElement createaccount= driver.findElement(By.xpath("//span[normalize-space()='Create account']"));
+		createaccount.click();
+		WebElement fmu=driver.findElement(By.xpath("//span[normalize-space()='For my personal use']"));
+		fmu.click();
+		Thread.sleep(1000);
+		WebElement fn=driver.findElement(By.id("firstName"));
+		fn.sendKeys("peter");
+		WebElement ln=driver.findElement(By.id("lastName"));
+		ln.sendKeys("parker");
+		WebElement nxt=driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+		nxt.click();
+		Thread.sleep(1000);
+		Select monthdropdown= new Select(driver.findElement(By.id("month")));
+		monthdropdown.selectByValue("8");
+		WebElement day=driver.findElement(By.id("day"));
+		day.sendKeys("26");
+		WebElement year=driver.findElement(By.id("year"));
+		year.sendKeys("2006");
+		Thread.sleep(500);
+		Select genderdropdown= new Select(driver.findElement(By.id("gender")));
+		genderdropdown.selectByValue("1");
+		WebElement next=driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+		next.click();
+		Thread.sleep(1000);
+		WebElement un=driver.findElement(By.name("Username"));
+		un.sendKeys("af641022");
+		WebElement niext=driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+		niext.click();
+		Thread.sleep(1000);
+		WebElement pwd=driver.findElement(By.name("Passwd"));
+		pwd.sendKeys("Abcdefghijk@1234");
+		WebElement cnfpwd=driver.findElement(By.name("PasswdAgain"));
+		cnfpwd.sendKeys("Abcdefghijk@1234");
+		WebElement niexte=driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+		niexte.click();
+		Thread.sleep(1000);
+		WebElement phn=driver.findElement(By.id("phoneNumberId"));
+		phn.sendKeys("9390012465");
+		WebElement niextee=driver.findElement(By.xpath("//span[normalize-space()='Next']"));
+		niextee.click();
+		
+		
+		
+		
+		
+	}
+
+}
+
