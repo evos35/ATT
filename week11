@@ -1,0 +1,38 @@
+
+package nithesh;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class week11 {
+
+	public static void main(String[] args) throws InterruptedException {
+			// TODO Auto-generated method stub
+			WebDriver d=new ChromeDriver();
+			   Actions builder = new Actions(d);
+				d.manage().window().maximize();
+				d.get("https://www.myntra.com/");
+				Thread.sleep(5000);WebElement profileHyperlink = d.findElement(By.xpath("(//span[normalize-space()='Profile'])"));
+				profileHyperlink.click();
+				WebElement loginbtn = d.findElement(By.xpath("(//a[normalize-space()='login / Signup'])"));
+				loginbtn.click();
+				WebElement mobileno = d.findElement(By.xpath("(//input[@type='tel'])[1]"));
+				mobileno.sendKeys("9490547822");
+				Thread.sleep(1000);
+				WebElement continuebtn = d.findElement(By.name("//div[@class='submitBottomOption'])[1]"));
+				continuebtn.click();
+				Thread.sleep(1000);
+				WebElement otp01 =d.findElement(By.xpath("(//input[@name='otp0'])[1]"));
+				otp01.sendKeys("2");
+				WebElement otp02 =d.findElement(By.xpath("(//input[@name='otp1'])[1]"));
+				otp02.sendKeys("2");
+				WebElement otp03 =d.findElement(By.xpath("(//input[@name='otp2'])[1]"));
+				otp03.sendKeys("2");
+				WebElement otp04 =d.findElement(By.xpath("(//input[@name='otp3'])[1]"));
+				otp04.sendKeys("2");
+				d.close();
+		}
+
+	}
