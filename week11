@@ -1,12 +1,12 @@
+package expp11;
 
-package nithesh;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class week11 {
+public class expp11 {
 
 	public static void main(String[] args) throws InterruptedException {
 			// TODO Auto-generated method stub
@@ -19,7 +19,7 @@ public class week11 {
 				WebElement loginbtn = d.findElement(By.xpath("(//a[normalize-space()='login / Signup'])"));
 				loginbtn.click();
 				WebElement mobileno = d.findElement(By.xpath("(//input[@type='tel'])[1]"));
-				mobileno.sendKeys("9490547822");
+				mobileno.sendKeys("7671940615");
 				Thread.sleep(1000);
 				WebElement continuebtn = d.findElement(By.name("//div[@class='submitBottomOption'])[1]"));
 				continuebtn.click();
